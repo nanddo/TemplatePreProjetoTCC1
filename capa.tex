@@ -1,0 +1,48 @@
+% Capa
+\begin{titlepage}
+
+\newcommand{\universidade}{UNIVERSIDADE FEDERAL DE SERGIPE}
+\newcommand{\centro}{CENTRO DE CIÊNCIAS EXATAS E TECNOLOGIA}
+\newcommand{\departamento}{DEPARTAMENTO DE COMPUTAÇÃO}
+\newcommand{\curso}{CURSO DE BACHARELADO EM}
+
+\newcommand{\cidade}{São Cristóvão -- SE}
+\renewcommand{\today}{
+	\ifcase \month 
+		\or Janeiro,
+		\or Fevereiro,
+		\or Março,
+		\or Abril,
+		\or Maio,
+		\or Junho,
+		\or Julho,
+		\or Agosto,
+		\or Setembro,
+		\or Outubro,
+		\or Novembro,
+		\or Dezembro,
+	\fi
+		\number \year} 
+
+\pagenumbering{arabic}
+
+\begin{center}
+{\textbf{\universidade}}
+\par
+{\textbf{\centro}}
+\par
+{\textbf{\departamento}}
+\par
+{\textbf{\curso}}
+\vfill
+{\textbf{\titulo}}
+\vfill
+{\textbf{\aluno}}
+\vfill
+{\textbf{\cidade}}
+\par
+{\textbf{\today}}
+\end{center}
+\end{titlepage}
+
+\pagenumbering{arabic}

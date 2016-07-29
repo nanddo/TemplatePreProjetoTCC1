@@ -1,0 +1,24 @@
+\documentclass[letter,12pt]{article}
+
+\include{meta}
+
+\graphicspath{ {./images/} }
+
+\newcommand{\titulo}{Título do Trabalho de Conclusão de Curso}	
+\newcommand{\aluno}{Nome do(a) Aluno(a)}
+\newcommand{\orientador}{Nome do(a) Orientador(a)}
+
+\begin{document}
+\input{capa}
+\input{titulo}
+\input{introducao}
+\input{objetivo}
+\input{metodologia}
+% Incrementa o contador de secoes
+\stepcounter{section}
+% Altera o nome da bibliografia
+\renewcommand{\bibname}{\thesection	\hspace{6pt} Fontes de Pesquisa}
+\bibliographystyle{unsrt}
+\bibliography{ref}
+\input{assinatura}
+\end{document}

@@ -1,0 +1,153 @@
+%%% Pacotes utilizados %%%
+
+%% Codificação e formatação básica do LaTeX
+% Suporte para português (hifenação e caracteres especiais)
+\usepackage[english,brazilian]{babel}
+% Codificação do arquivo
+\usepackage[utf8]{inputenc}
+% Mapear caracteres especiais no PDF
+\usepackage{cmap}
+% Codificação da fonte
+\usepackage[T1]{fontenc}
+% Essencial para colocar funções e outros símbolos matemáticos
+\usepackage{amsmath,amssymb,amsfonts,textcomp}
+% Unidades de medida
+\usepackage{siunitx}
+% Identa o primeiro parágrafo
+\usepackage{indentfirst}
+
+%% Elementos Gráficos
+% Para incluir figuras (pacote extendido)
+\usepackage[]{graphicx}
+% Package para figuras em containers
+\usepackage{float}
+% Suporte a cores
+\usepackage{color}
+% Criar figura dividida em subfiguras
+\usepackage{subfig}
+% Legenda da figura
+\captionsetup[subfigure]{style=default, margin=0pt, parskip=0pt, hangindent=0pt, indention=0pt, singlelinecheck=true, labelformat=parens, labelsep=space}
+% Customizar as legendas de figuras e tabelas
+\usepackage{caption}
+% Criar ambientes com 2 ou mais colunas
+\usepackage{multicol}
+% Usar subfiguras
+\usepackage{subfig}
+
+
+%% Tabelas
+% Elementos extras para formatação de tabelas
+\usepackage{array}
+% Tabelas com qualidade de publicação
+\usepackage{booktabs}
+% Para criar tabelas maiores que uma página
+\usepackage{longtable}
+% adicionar tabelas e figuras como landscape
+\usepackage{lscape}
+% girar página no pdf
+\usepackage{pdflscape}
+% rotacionar imagens e tabelas
+\usepackage{rotating}
+% package para criar tabelas
+\usepackage{tabulary}
+% escrever algoritmos
+\usepackage[portuguese,onelanguage]{algorithm2e}
+% células ocupando várias linhas
+\usepackage{multirow}
+% colorir células
+\usepackage{color, colortbl, hhline}
+
+
+%% Lista de Abreviações
+% Cria lista de abreviações
+\usepackage[notintoc,portuguese]{nomencl}
+\makenomenclature
+
+
+%% Notas de rodapé
+\usepackage{footnote}
+% Notas criadas nas tabelas ficam no fim das tabelas
+\makesavenoteenv{tabular}
+
+
+%% Links dinâmicos
+% Suporte para hipertexto, links para referências e figuras
+\usepackage{hyperref}
+% Configurações dos links e metatags do PDF a ser gerado
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue}
+% Conta o número de páginas
+\usepackage{lastpage}
+
+
+%% Referências bibliográficas e afins
+\usepackage{natbib}
+% Adicionar bibliografia, índice e conteúdo na Tabela de conteúdo (não inclui lista de tabelas e figuras no índice)
+\usepackage[nottoc,notlof,notlot]{tocbibind}
+
+
+%% Pontuação e unidades
+% Posicionar inteligentemente a vírgula como separador decimal
+\usepackage{icomma}
+% Formatar as unidades com as distâncias corretas
+\usepackage[tight]{units}
+
+
+%% Layout
+% Para definir espaçamento entre as linhas
+\usepackage{setspace}
+% Espaçamento do texto para o frame
+\setlength{\fboxsep}{1em}
+% Package para editar margens
+\usepackage{anysize}
+% margem esquerda, paginas impares
+\setlength{\oddsidemargin}{0cm}  
+% margem esquerda páginas pares (igual impares)
+\setlength{\evensidemargin}{0cm} 
+% Espaçamento 1,5
+\onehalfspacing
+
+
+%% Inserir código-fonte em linguagens de programação
+% Pacote utilizado
+\usepackage{listings}
+% Configurações do código
+\lstset{
+  language = C++,
+  basicstyle = \tiny\ttfamily,
+  breaklines = true,
+  %caption = \lstname,
+  captionpos = b,
+  commentstyle = \color[rgb]{0,0.6,0},
+  frame = single,
+  keywordstyle = \color{blue},
+  %morekeywords={plus, shl}, 
+  stringstyle=\color[rgb]{0.8,0,0},
+  %style = customc,
+  tabsize = 4
+}
+
+
+%% Cabeçalho e rodapé
+% Controlar os cabeçalhos e rodapés
+\usepackage{fancyhdr}
+% Usar os estilos do pacote fancyhdr
+\pagestyle{fancy}
+\fancypagestyle{plain}{\fancyhf{}}
+% Limpar os campos do cabeçalho atual
+\fancyhead{}
+% Número da página no rodapé
+\fancyfoot[C]{\thepage}
+% Omitir linha de separação entre cabeçalho e conteúdo
+\renewcommand{\headrulewidth}{0pt}
+% Omitir linha de separação entre rodapé e conteúdo
+\renewcommand{\footrulewidth}{0pt}
+% Altura do cabeçalho (13.6pt)
+\headheight 0pt
+% Girar a página na horizontal
+\usepackage{lscape}
+
+
+%% Comandos customizados
+\newcommand{\etal}{et~al.}
+\newcommand{\ie}{i.~e.}
+\newcommand{\eg}{e.~g.}
